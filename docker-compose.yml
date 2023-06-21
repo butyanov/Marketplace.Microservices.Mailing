@@ -1,0 +1,17 @@
+﻿services:
+  postgresMailing:
+    image: postgres:alpine
+    environment:
+      POSTGRES_USER: postgresMailing
+      POSTGRES_PASSWORD: postgresMailing
+      POSTGRES_DB: postgresMailing
+    ports:
+      - "5555:5432"
+  postgresScheduling:
+    image: postgres:alpine
+    environment:
+      POSTGRES_USER: postgresScheduling
+      POSTGRES_PASSWORD: postgresScheduling
+      POSTGRES_DB: postgresScheduling
+    ports:
+      - "5556:5432"
